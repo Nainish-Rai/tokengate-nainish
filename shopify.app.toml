@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "e5a7f8ad0d87de62538fec573a61a24b"
+name = "tokengate-monet"
+handle = "tokengate-monet"
+application_url = "https://carried-rug-j-pk.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-04de84f3.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_discounts,read_gates,write_discounts,write_gates,write_products"
+
+[auth]
+redirect_urls = [
+  "https://carried-rug-j-pk.trycloudflare.com/auth/callback",
+  "https://carried-rug-j-pk.trycloudflare.com/auth/shopify/callback",
+  "https://carried-rug-j-pk.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
